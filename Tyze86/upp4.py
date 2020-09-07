@@ -31,30 +31,35 @@ av hur pandas hjälper till med formatering av utskrifter
 import numpy
 import pandas
 
+# count och de 3 tomma listorna, count används för separera listorna
 count=0
 nump_array1 = []
 nump_array2 = []
 nump_array3 = []
 
+# Listorna separeras i while-loopen via count som överstigen ett visst antal tex första listan har 4 tal i sig innan counter<=3 och den skriver andra listan.
 while count<12:
     if count <=3:
-        num = input(f'Ange tal: ')
+        num = input(f'Ange tal för år 2017: ')
         nump_array1.append(num)
     elif count>3 and count<=7:
-        num = input(f'Ange tal: ')
+        num = input(f'Ange tal för år 2018: ')
         nump_array2.append(num)
     else :
-        num = input(f'Ange tal: ')
+        num = input(f'Ange tal för år 2019: ')
         nump_array3.append(num)
     count= count + 1
+
+# listorna ändras till numpy arrays som sedan skrivs in i pandas DataFrame med årtal som kolumner och kvartal som rader
 nump_array1 = numpy.array(nump_array1)
 nump_array2 = numpy.array(nump_array2)
 nump_array3 = numpy.array(nump_array3)
 temp_set = [nump_array1,nump_array2,nump_array3]
 nump_set = numpy.array(temp_set)
-dataset = pandas.DataFrame(data=nump_set,index=['list1:','list2:','list3:'],columns=['value1','value2','value3','value4'])
+dataset = pandas.DataFrame(data=nump_set,index=['2017:','2018:','2019:'],columns=['Q1','Q2','Q3','Q4'])
 
-print(nump_array1)
-print(nump_array2)
-print(nump_array3)
+# Kommenterade bort prints för varje lista som användes för testa output
+# print(nump_array1)
+# print(nump_array2)
+# print(nump_array3)
 print(dataset)
