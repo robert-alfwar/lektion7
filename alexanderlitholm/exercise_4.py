@@ -4,11 +4,14 @@ import pandas as pd
 
 num_to_nparray = list()
 for i in range(0, 12):
-    num_to_nparray.append(int(input("Please enter a number to the dataframe: ")))
+    year = 2017 + (i // 4)
+    quarter = 1 + (i % 4)
+    num_to_nparray.append(int(input(f'Enter profit Q{quarter} year {year}: ')))
 
 nparray = np.array(num_to_nparray)
 nparray = np.split(nparray, 3)
 print(nparray)
 
-data_frame = pd.DataFrame(data=nparray, index=["row1", "row2", "row3"], columns=["colum1", "column2", "column3", "column4"])
+data_frame = pd.DataFrame(data=nparray, index=["2017", "2018", "2019"],
+                          columns=["Q1", "Q2", "Q3", "Q4"])
 print(data_frame)
