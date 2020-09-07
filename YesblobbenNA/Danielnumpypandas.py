@@ -29,7 +29,7 @@ number_array2 = np.array(number_array2)
 number_array3 = np.array(number_array3)
 #Listorna konverteras till arrays
 
-data = [[number_array], [number_array2], [number_array3]]
-df = pd.DataFrame(data, columns = ["Lottorader"])
+data = [number_array, number_array2, number_array3]
+df = pd.DataFrame(data, columns = ["Lotto 1", "Lotto 2", "Lotto 3", "Lotto 4"])
 print(df)
 #Lägger till arrays till en databas
