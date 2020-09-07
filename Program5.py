@@ -21,8 +21,11 @@ np_array_1 = np.array(split_list_1)
 np_array_2 = np.array(split_list_2)
 np_array_3 = np.array(split_list_3)
 
+#nested the array list and converted to numpyarray
+np_set = [np_array_1,np_array_2,np_array_3]
+np_col = np.array(np_set)
 #adds the np.arrays to a pd.DataFrame
-dataframe = pd.DataFrame({'List 1': np_array_1, 'List 2': np_array_2, 'List 3': np_array_3})
+dataframe = pd.DataFrame(data=np_col,index=['2017:','2018:','2019:'],columns=['Q1','Q2','Q3','Q4'])
 
 print(dataframe)
 #Outputs, ex:
