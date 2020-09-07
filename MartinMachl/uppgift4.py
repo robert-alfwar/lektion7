@@ -24,7 +24,6 @@ print()
 arr_1 = np.array(numbers_1)
 arr_2 = np.array(numbers_2)
 arr_3 = np.array(numbers_3)
-
-dataset = pd.DataFrame({"Array 1" : arr_1, "Array 2" : arr_2, "Array 3" : arr_3})
-
+dataset = pd.DataFrame({"2017" : arr_1, "2018" : arr_2, "2019" : arr_3}, index=["Q1", "Q2", "Q3", "Q4"])
 print(dataset)
+
