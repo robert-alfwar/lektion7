@@ -1,0 +1,11 @@
+
+# Create env
+# <env name> is also the folder name
+# I'm using the env name "lek7"
+python3 -m venv <env name> 
+
+# Activate env
+source <env name>/bin/activate
+
+# Deactivate env
+deactivate
