@@ -26,9 +26,9 @@ for c in range(var_columns):
 numpy_one = np.array(var_arraylist[0])
 numpy_two = np.array(var_arraylist[1])
 numpy_three = np.array(var_arraylist[2])
+numpys = numpy_one, numpy_two, numpy_three
 
-
-var_dataframe = pd.DataFrame(data=var_arraylist,
+var_dataframe = pd.DataFrame(data=numpys,
                              index=['1:', '2:', '3:'],
                              columns=['1:', '2:', '3:', '4:'])
 
