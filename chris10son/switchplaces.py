@@ -7,7 +7,7 @@ list2 = []
 list3 = []
 list4 = []
 
-
+print("Following statements will ask you to give values...\n")
 #ta in o dela ut i listor
 for f in range(4):
     nr = int(input("type a number for list1: "))
@@ -35,7 +35,7 @@ arr3 = np.array(list3)
 
 
 #konvertera till panda DataFrame samt dela upp i rader och kolumner.
-df = pd.DataFrame(data=(arr1,arr2,arr3), index=["row1", "row2", "row3"], columns=["column1", "column2", "column3", "column4"])
+df = pd.DataFrame(data=(arr1,arr2,arr3), index=["2017", "2018", "2019"], columns=["Q1", "Q2,","Q3","Q4"])
 print(df)
 
 
