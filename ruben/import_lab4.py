@@ -10,10 +10,13 @@ q = ["Q1", "Q2", "Q3", "Q4"]
 q_index = 0
 y_index = 0
 
+print()
+print("Three year economic overview for Ruben Inc.") # added header
+
 def business_cycle(nums_list, q, y, q_index, y_index):
     print("\nProvide company revenue in millions of USD.")
     for item in nums_list:
-        for element in range(4):
+        for _ in range(4): # removed unused variable
             num = int(input(f"Input revenue for {q[q_index]} {y[y_index]}: "))
             item.append(num)
             q_index += 1
