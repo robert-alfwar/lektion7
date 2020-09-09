@@ -15,18 +15,16 @@ def swap_elements(numbers: list, index):
     to_swap = numbers.pop(index)
     numbers.insert(index + 1, to_swap)
 
-def sort_iteration(numbers):
-    changes = False
-    for index in range(0, len(numbers) -1):
-        if element_greater(elements(numbers, index)):
+def bubble(numbers, index = 0, changes = False):
+    if index >= len(numbers) -1: return numbers, changes
+    if element_greater(elements(numbers, index)):
             swap_elements(numbers, index)
             changes = True
-    return changes
+    return bubble(numbers, index + 1, changes)
 
 def bubble_sort(numbers):
-    changes = True
-    while changes:
-        changes = sort_iteration(numbers)
+    numbers, changes = bubble(numbers)
+    if changes: return bubble_sort(numbers)
     return numbers
 
 print(f'Before sort: {numbers}')
