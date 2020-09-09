@@ -10,7 +10,7 @@ vi två paket, numpy och pandas, som är väldigt användbara i många olika lä
 
 Uppgifter
     1. Kör ett kommando för att uppgradera pip "python -m pip install --upgrade pip"
-    2. Kontrollera om du redan har numpy och panda, tips "pip list", "pip show <paketnamn>"
+    2. Kontrollera om du redan har numpy och pandas, tips "pip list", "pip show <paketnamn>"
 """
 
 ## 2. Virtuell miljö
