@@ -9,3 +9,6 @@ venv/
 
 # Mac OS system files
 .DS_Store
+
+# IDE config
+.vscode
