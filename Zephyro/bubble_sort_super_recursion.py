@@ -10,13 +10,17 @@ sys.setrecursionlimit(1500)  # default is around 1000
 # I'm unsure of how high I'm willing to push it
 
 
-def swap(numbers: t.List[int], i: int) -> t.Tuple[t.List[int], bool]:
+def swap(numbers: t.List[int], 
+         i: int
+         ) -> t.Tuple[t.List[int], bool]:
     """Set `changes`"""
     numbers[i], numbers[i - 1] = numbers[i - 1], numbers[i]
     return numbers, True
 
 
-def swap_if_greater(numbers: t.List[int], changes: bool, i: int
+def swap_if_greater(numbers: t.List[int],
+                    changes: bool,
+                    i: int
                     ) -> t.Tuple[t.List[int], bool, int]:
     """Incremention of `i`"""
     if numbers[i] < numbers[i - 1]:
@@ -24,7 +28,9 @@ def swap_if_greater(numbers: t.List[int], changes: bool, i: int
     return numbers, changes, i + 1
 
 
-def bubble(numbers: t.List[int], changes: bool = False, i: int = 0
+def bubble(numbers: t.List[int],
+           changes: bool = False,
+           i: int = 0
            ) -> t.Tuple[t.List[int], bool]:
     """Initiation of `changes` and `i`"""
     if i >= len(numbers) - 1:
@@ -32,7 +38,8 @@ def bubble(numbers: t.List[int], changes: bool = False, i: int = 0
     return bubble(*swap_if_greater(numbers, changes, i + 1))
 
 
-def bubble_sort(numbers: t.List[int], changes: t.Optional[bool] = True
+def bubble_sort(numbers: t.List[int],
+                changes: t.Optional[bool] = True
                 ) -> t.List[int]:
     """Redo if `changes`. `changes` defaults to True for init"""
     if changes:
